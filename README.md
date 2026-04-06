@@ -1,58 +1,43 @@
-# LUPO
+# 3D Hero
 
-> A scroll-responsive WebGL hero experience with dithered black & white aesthetics.
+> Scroll-responsive WebGL hero section with dithered black and white aesthetics.
 
-## ✨ Features
+A full-screen canvas experiment where 3D cubes morph through L, U, P, O letterforms as you scroll. Uses a 4x4 Bayer dithering shader for a high-contrast film look, with glassmorphism content sections layered over the fixed canvas.
 
-- **LUPO Letter Cycling** — Morphing 3D cubes form L → U → P → O
-- **B&W Dithered Aesthetic** — 4×4 Bayer matrix pattern with film grain
-- **Scroll-Driven Animation** — Letters respond to scroll position
-- **Animated "move" Text** — Dramatic drop and bounce synced with 3D
-- **Glassmorphism Sections** — Hero, About, Work, Contact
-
-## 🚀 Quick Start
+## Quick start
 
 ```bash
-# Clone the repo
-git clone https://github.com/localwolfpackai/lupo.git
-cd lupo
-
-# Install dependencies
+git clone https://github.com/localwolfpackai/3d-hero.git
+cd 3d-hero
 npm install
-
-# Start dev server (opens browser automatically)
 npm run dev
 ```
 
-## 🎨 Tech Stack
+## How it works
 
-- **[Phenomenon.js](https://github.com/vaneenige/phenomenon)** — Lightweight WebGL renderer (2kB)
-- **[Vite](https://vitejs.dev)** — Fast dev server with HMR
-- **Custom Shaders** — Bayer dithering, morphing geometry
-- **CSS Animations** — Keyframe-driven text effects
+1. **Hero section** -- full-screen canvas with dithered LUPO animation
+2. **Scroll trigger** -- letters cycle based on scroll depth
+3. **Text sync** -- "move" word drops and vanishes on an 8-second cycle
+4. **Content sections** -- glassmorphism panels scroll over the fixed canvas
 
-## 📁 Structure
+## Stack
+
+- **Phenomenon.js** -- lightweight WebGL renderer (2kB)
+- **Vite** -- dev server with HMR
+- **Custom shaders** -- Bayer dithering, morphing geometry
+- **CSS keyframes** -- text entrance animations
+
+## Structure
 
 ```
-lupo/
-├── index.html          # Website with hero + sections
+3d-hero/
+├── index.html          # Page with hero + content sections
 ├── src/
 │   ├── main.js         # WebGL animation + scroll logic
 │   └── styles.css      # Layout + animations
 └── package.json
 ```
 
-## 🎬 How It Works
+## License
 
-1. **Hero Section** — Full-screen canvas with dithered LUPO animation
-2. **Scroll Trigger** — Letters cycle based on scroll depth
-3. **Text Sync** — "move" word drops/vanishes on 8-second cycle
-4. **Sections Below** — Content scrolls over fixed canvas background
-
-## 📝 License
-
-MIT © [Anthony Lupo](https://github.com/anthonylupo)
-
----
-
-*Made with ⚡ Phenomenon.js*
+MIT -- Lupo Studios
