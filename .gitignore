@@ -1,9 +1,14 @@
-# Vite Configuration
-# Uses ES modules and auto-opens browser
-
 # Environment
-*.local
+# - Always ignore secrets
 .env
+.env.local
+.env.*.local
+
+# If you use Vite/Next/etc, you might generate local overrides.
+# Keep this broad ignore, but still allow the explicit env patterns above.
+*.local
+
+# (Optional) ignore other env variants people sometimes create
 .env.*
 
 # Dependencies
@@ -11,6 +16,7 @@ node_modules/
 
 # Build
 dist/
+.next/
 
 # IDE
 .idea/
@@ -21,5 +27,3 @@ dist/
 # OS
 .DS_Store
 Thumbs.db
-
-.next/
